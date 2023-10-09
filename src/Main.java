@@ -1,12 +1,10 @@
+import java.util.Arrays;
 class Solution {
-    public ListNode middleNode(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while(fast != null && fast.next != null){
-            slow = slow.next;
-            fast = fast.next.next;
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        for(int i = m, c = 0; i < nums1.length; i++){
+            nums1[i] = nums2[c];
+            c++;
         }
-        return slow;
+        Arrays.sort(nums1);
     }
 }
