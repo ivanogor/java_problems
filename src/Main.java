@@ -1,8 +1,13 @@
 class Solution {
-    public int[] runningSum(int[] nums) {
-        for(int i = 1; i < nums.length; i++){
-            nums[i] = nums[i] + nums[i - 1];
+    public int maximumWealth(int[][] accounts) {
+        int max = 0;
+        for(int i[] : accounts){
+            int sum = 0;
+            for(int j : i){
+                sum += j;
+            }
+            max = Math.max(sum, max);
         }
-        return nums;
+        return max;
     }
 }
